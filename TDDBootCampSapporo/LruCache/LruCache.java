@@ -25,7 +25,7 @@ public class LruCache {
 	}
 	
 	public void put(String key,String value){
-		//ƒL[‚ª‚ ‚ê‚ÎÅŒã‚ÉˆÚ“®
+		//ã‚­ãƒ¼ãŒã‚ã‚Œã°æœ€å¾Œã«ç§»å‹•
 		if(map.containsKey(key)){
 			map.remove(key);
 			order.remove(key);
@@ -39,7 +39,7 @@ public class LruCache {
 	public void deleteOld(){
 		if(max < map.size()){
 
-			//ˆê”ÔŒÃ‚¢ƒL[‚Ìƒf[ƒ^‚ğíœ
+			//ä¸€ç•ªå¤ã„ã‚­ãƒ¼ã®ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤
 			map.remove(searchOldKey());
 			order.remove(searchOldKey());
 
@@ -48,7 +48,7 @@ public class LruCache {
 
 	
 	private String searchOldKey() {
-		//ˆê”ÔŒÃ‚¢ƒL[‚ğ’T‚·
+		//ä¸€ç•ªå¤ã„ã‚­ãƒ¼ã‚’æ¢ã™
 			return order.get(0);
 	}
 	
@@ -61,3 +61,4 @@ public class LruCache {
 		
 	}
 }
+

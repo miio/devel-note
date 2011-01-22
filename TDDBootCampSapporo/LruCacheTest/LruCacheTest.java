@@ -14,28 +14,28 @@ import static org.junit.Assert.*;
 public class LruCacheTest {
 	
 	@Test	
-	public void Get‚µ‚½‚çA‚Ì’†gdataA‚ª‚©‚¦‚Á‚Ä‚­‚é(){
+	public void Getã—ãŸã‚‰Aã®ä¸­èº«dataAãŒã‹ãˆã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		assertEquals("dataA",cache.get("a"));
 	}
 	
 	@Test	
-	public void Get‚µ‚½‚çB‚Ì’†gdataB‚ª‚©‚¦‚Á‚Ä‚­‚é(){
+	public void Getã—ãŸã‚‰Bã®ä¸­èº«dataBãŒã‹ãˆã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("b", "dataB");
 		assertEquals("dataB",cache.get("b"));
 	}
 	
 	@Test	
-	public void Get‚µ‚½‚çC‚Ì’†ghennano‚ª‚©‚¦‚Á‚Ä‚­‚é(){
+	public void Getã—ãŸã‚‰Cã®ä¸­èº«hennanoãŒã‹ãˆã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("c", "hennano");
 		assertEquals("hennano",cache.get("c"));
 	}	
 	
 	@Test	
-	public void A‚ÆB‚ğ“ü‚ê‚ÄdataA‚ÆdataB‚ª‚©‚¦‚Á‚Ä‚­‚é(){
+	public void Aã¨Bã‚’å…¥ã‚Œã¦dataAã¨dataBãŒã‹ãˆã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -45,7 +45,7 @@ public class LruCacheTest {
 	
 	@Ignore
 	@Test	
-	public void A‚ÆB‚ÆC‚ğ“ü‚ê‚ÄdataB‚ÆdataC‚Ænull‚ª‚©‚¦‚Á‚Ä‚­‚é(){
+	public void Aã¨Bã¨Cã‚’å…¥ã‚Œã¦dataBã¨dataCã¨nullãŒã‹ãˆã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -57,7 +57,7 @@ public class LruCacheTest {
 	
 	@Ignore
 	@Test
-	public void FX“ü‚ê‚ÄÅŒã‚Ì2‚Â‚ª‚©‚¦‚Á‚Ä‚­‚é(){
+	public void è‰²ã€…å…¥ã‚Œã¦æœ€å¾Œã®2ã¤ãŒã‹ãˆã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("1", "data1");
 		cache.put("2", "data2");
@@ -73,14 +73,14 @@ public class LruCacheTest {
 	}
 	
 	@Test
-	public void A‚ğ“ü‚ê‚½‚ç”z—ñ”Ô†0‚ª‹A‚Á‚Ä‚­‚é(){
+	public void Aã‚’å…¥ã‚ŒãŸã‚‰é…åˆ—ç•ªå·0ãŒå¸°ã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		assertEquals(0,cache.getOrder("a"));
 	}
 	
 	@Test
-	public void A‚ÆB‚ğ“ü‚ê‚½‚çA‚Ì”z—ñ”Ô†‚ª0‚ÅB‚Ì”z—ñ”Ô†‚ª1‚Æ‚µ‚Ä‹A‚Á‚Ä‚­‚é(){
+	public void Aã¨Bã‚’å…¥ã‚ŒãŸã‚‰Aã®é…åˆ—ç•ªå·ãŒ0ã§Bã®é…åˆ—ç•ªå·ãŒ1ã¨ã—ã¦å¸°ã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -89,7 +89,7 @@ public class LruCacheTest {
 	}
 	
 	@Test
-	public void ˆê”ÔŒÃ‚¢‚Ì‚ğÁ‚·(){
+	public void ä¸€ç•ªå¤ã„ã®ã‚’æ¶ˆã™(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -101,7 +101,7 @@ public class LruCacheTest {
 	
 	
 	@Test
-	public void A‚ÆB‚ÆC‚ğ“ü‚ê‚½‚çA‚Ì”z—ñ”Ô†‚ªƒ}ƒCƒiƒX1‚ÅB‚Ì”z—ñ”Ô†‚ª0‚ÅC‚Ì”z—ñ”Ô†‚ª1‚Æ‚µ‚Ä‹A‚Á‚Ä‚­‚é(){
+	public void Aã¨Bã¨Cã‚’å…¥ã‚ŒãŸã‚‰Aã®é…åˆ—ç•ªå·ãŒãƒã‚¤ãƒŠã‚¹1ã§Bã®é…åˆ—ç•ªå·ãŒ0ã§Cã®é…åˆ—ç•ªå·ãŒ1ã¨ã—ã¦å¸°ã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -112,7 +112,7 @@ public class LruCacheTest {
 	}
 	
 	@Test
-	public void ABAC‚Æ‚¢‚ê‚½‚çB‚ª”²‚¯‚ÄA‚ÆC‚ª©‘R”‚Å‹A‚Á‚Ä‚­‚é(){
+	public void ABACã¨ã„ã‚ŒãŸã‚‰BãŒæŠœã‘ã¦Aã¨CãŒè‡ªç„¶æ•°ã§å¸°ã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -124,7 +124,7 @@ public class LruCacheTest {
 	}
 	
 	@Test
-	public void AB“ü‚ê‚ÄAŒÄ‚ñ‚ÅC“ü‚ê‚½‚çB‚ª”²‚¯‚ÄA‚ÆC‚ª©‘R”‚Å‹A‚Á‚Ä‚­‚é(){
+	public void ABå…¥ã‚Œã¦Aå‘¼ã‚“ã§Cå…¥ã‚ŒãŸã‚‰BãŒæŠœã‘ã¦Aã¨CãŒè‡ªç„¶æ•°ã§å¸°ã£ã¦ãã‚‹(){
 		LruCache cache = new LruCache(2);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -136,7 +136,7 @@ public class LruCacheTest {
 	}
 	
 	@Test
-	public void ”z—ñƒTƒCƒY‚T‚Æ‚µ‚ÄABCD“ü‚ê‚ÄCŒÄ‚ñ‚ÅDE“ü‚ê‚½(){
+	public void é…åˆ—ã‚µã‚¤ã‚ºï¼•ã¨ã—ã¦ABCDå…¥ã‚Œã¦Cå‘¼ã‚“ã§DEå…¥ã‚ŒãŸ(){
 		LruCache cache = new LruCache(4);
 		cache.put("a", "dataA");
 		cache.put("b", "dataB");
@@ -154,3 +154,4 @@ public class LruCacheTest {
 	
 	
 }
+
